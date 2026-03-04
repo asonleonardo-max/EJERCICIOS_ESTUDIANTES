@@ -4,11 +4,17 @@ Un gimnasio tiene una lista de códigos de acceso de los socios que pagaron la m
 El Problema: Cuando un socio digita su código, el sistema debe validar si el código está en la lista de "pagos al día". Si no está, se le niega la entrada.
 Algoritmo a usar: Búsqueda Binaria. Es eficiente para buscar códigos numéricos en una lista que ya está organizada.*/
 
+import java.util.Scanner;
+
 public class Ejercicios4 {
     public static void main(String[] args) {
         
+        Scanner scanner = new Scanner(System.in);
+
         int[] codigos = {101, 203, 305, 450, 560, 678};
-        int codigoIngresado = 450;
+        
+        System.out.print("Ingrese el código: ");
+        int codigoIngresado = scanner.nextInt();
 
         int inicio = 0;
         int fin = codigos.length - 1;
@@ -32,5 +38,7 @@ public class Ejercicios4 {
         } else {
             System.out.println("Acceso denegado.");
         }
+
+        scanner.close();
     }
 }
