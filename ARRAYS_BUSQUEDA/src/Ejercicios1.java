@@ -6,21 +6,23 @@ Algoritmo a usar: Búsqueda Lineal. Es el ideal porque los productos en la estan
 
 public class Ejercicios1 {
     public static void main(String[] args) {
+
+        int[] productos = {123456, 771212, 555888, 999000, 770123};
+        int codigoBuscado = 770123;
+        boolean encontrado = false;
+
+        for (int i = 0; i < productos.length; i++) {
+            if (productos[i] == codigoBuscado) {
+                System.out.println("Producto encontrado en la posición: " + i);
+                encontrado = true;
+                break;
+            }
+        }
+
+        if (!encontrado) {
+            System.out.println("Producto no encontrado.");
+        }
     
-        int [] codigo = {770275, 782454, 770236, 770123, 770124};
-
-        /*int numero = 770123;
-
-        if numero == numero;*/
-
-
-
-        for (int i = 0; i < codigo.length; i++) {
-            System.out.println("codigo[" + i + "] = " + codigo[i]);
-        }
         
-        for (int n : codigo) {
-            System.out.print(n + " ");
-        }
-    }
+}
 }

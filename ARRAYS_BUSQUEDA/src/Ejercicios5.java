@@ -7,7 +7,15 @@ Algoritmo a usar: Búsqueda Lineal con Contador. Debes recorrer todo el arreglo 
 public class Ejercicios5 {
     public static void main(String[] args) {
 
-        
+        double[] notas = {3.5, 5.0, 4.0, 2.8, 5.0, 3.9, 5.0};
+        int contador = 0;
+
+        for (int i = 0; i < notas.length; i++) {
+            if (notas[i] == 5.0) {
+                contador++;
+            }
+        }
+        System.out.println("Cantidad de estudiantes con nota 5.0: " + contador);
     }
     
 }

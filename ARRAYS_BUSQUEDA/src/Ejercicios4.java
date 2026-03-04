@@ -7,5 +7,30 @@ Algoritmo a usar: Búsqueda Binaria. Es eficiente para buscar códigos numérico
 public class Ejercicios4 {
     public static void main(String[] args) {
         
+        int[] codigos = {101, 203, 305, 450, 560, 678};
+        int codigoIngresado = 450;
+
+        int inicio = 0;
+        int fin = codigos.length - 1;
+        boolean permitido = false;
+
+        while (inicio <= fin) {
+            int medio = (inicio + fin) / 2;
+
+            if (codigos[medio] == codigoIngresado) {
+                permitido = true;
+                break;
+            } else if (codigos[medio] < codigoIngresado) {
+                inicio = medio + 1;
+            } else {
+                fin = medio - 1;
+            }
+        }
+
+        if (permitido) {
+            System.out.println("Acceso permitido.");
+        } else {
+            System.out.println("Acceso denegado.");
+        }
     }
 }

@@ -6,6 +6,16 @@ Algoritmo a usar: Búsqueda Lineal de Máximo. Debes recorrer todo el arreglo co
 
 public class Ejercicios3 {
     public static void main(String[] args) {
-        
+     
+        double[] temperaturas = {65.5, 70.2, 68.9, 75.0, 72.3};
+
+        double mayor = temperaturas[0];
+
+        for (int i = 1; i < temperaturas.length; i++) {
+            if (temperaturas[i] > mayor) {
+                mayor = temperaturas[i];
+            }
+        }
+        System.out.println("La temperatura más alta fue: " + mayor);
     }
 }
