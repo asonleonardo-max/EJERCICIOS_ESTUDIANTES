@@ -25,6 +25,7 @@ public class Reto {
 
         int[] listaNegra = {50, 120, 450, 800, 999};
 
+
         int inicio = 0;
         int fin = listaNegra.length - 1;
         boolean encontrado = false;
