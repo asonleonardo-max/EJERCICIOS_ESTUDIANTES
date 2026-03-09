@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class ComparacionAlgoritmos {
     public static void main(String[] args) {
         
-        Scanner sc = new Scanner(System.in);
+        Scanner teeclado = new Scanner(System.in);
 
         int[] numeros = new int[6];
 
@@ -22,7 +22,7 @@ public class ComparacionAlgoritmos {
         System.out.println("Ingrese 6 números:");
 
         for (int i = 0; i < 6; i++) {
-            numeros[i] = sc.nextInt();
+            numeros[i] = teeclado.nextInt();
         }
 
         // Copiar arreglo para usar ambos algoritmos
@@ -43,7 +43,7 @@ public class ComparacionAlgoritmos {
             System.out.println("Ambos tuvieron la misma eficiencia.");
         }
 
-        sc.close();
+        teeclado.close();
     }
 
     // Selection Sort
